@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>3D Carousel with Upload</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- UPLOADER -->
+  <div id="uploader">
+    <h2>Upload Your Images</h2>
+    <p class="hint">Choose some images to create your 3D carousel.</p>
+
+    <!-- Özel buton + gizli input -->
+    <label for="imageInput" id="customFileButton">Choose Files</label>
+    <input
+      type="file"
+      id="imageInput"
+      accept="image/*"
+      multiple
+    />
+
+    <button id="startCarousel">Start Carousel</button>
+
+    <p class="small-info">Tip: 4 or more images look better in the carousel.</p>
+  </div>
+
+  <!-- 3D CAROUSEL -->
+  <div id="carousel" data-auto="true" style="display:none;">
+    <div id="scene">
+      <!-- JS ile doldurulacak -->
+    </div>
+
+    <!-- Tüm buton grubu -->
+    <div id="carousel_btn_group">
+
+      <!-- Prev / Next -->
+      <div id="carousel_btn">
+        <div class="btn prev">Prev</div>
+        <div class="btn next">Next</div>
+      </div>
+
+      <!-- Stop / Restart / Update -->
+      <div id="carousel_controls">
+        <button id="pauseCarousel">Stop</button>
+        <button id="resumeCarousel">Restart</button>
+        <button id="updateCarousel">Update</button>
+      </div>
+
+      <!-- Video Recording -->
+      <div id="record_controls">
+        <button id="startRecord">Record Video</button>
+        <button id="stopRecord" disabled>Stop Recording</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
